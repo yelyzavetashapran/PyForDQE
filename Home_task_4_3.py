@@ -9,9 +9,9 @@ it iZ misspeLLing here.fix“iZ” with correct “ is ”, but ONLY when it Iz 
 last iz TO calculate nuMber OF Whitespace characteRS in this Text.caREFULL, not only Spaces, but ALL whitespaces.I got 87."""
 
 
-def normalization():
+def normalization(n):
     output = ''
-    for i in a.lower().split('\n'):  # Convert string into lower case and split it by '\n'
+    for i in n.lower().split('\n'):  # Convert string into lower case and split it by '\n'
         for y in i.split('.'):  # Split again by '.'
             if y.find('iz') != -1:  # If 'iz' not False
 
@@ -30,7 +30,7 @@ def normalization():
     return output
 
 
-output = normalization()
+output = normalization(a)
 
 
 def creation_of_last_words_sentence(n):
