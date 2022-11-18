@@ -47,7 +47,7 @@ def publishing():
                result = (f'Private Ad -------------------\n{private_ad.text}\nActual until: {private_ad.date_time()}\n------------------------------')
           elif n == 'Useful Tips':
                useful_tips = UsefulTips(input('Your tip: '), input('Author: '))
-               result = (f'Useful Tips ------------------\n{useful_tips.text}\nActual until: {useful_tips.author}\n------------------------------')
+               result = (f'Useful Tips ------------------\n{useful_tips.text}\nAuthor: {useful_tips.author}\n------------------------------')
           return result
      except:
           print('This data type is not supported.')

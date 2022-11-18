@@ -54,8 +54,8 @@ def count_of_whitespaces(n):
     return whitespaces
 
 
-def append_new_sentence(n, m):
-    result = n[:n.find('paragraph.')+10] + '\n' + m.capitalize() + n[n.find('paragraph.')+10:]  # Final output
+def append_new_sentence(main_text, new_sentence):
+    result = main_text[:main_text.find('paragraph.')+10] + '\n' + new_sentence.capitalize() + main_text[main_text.find('paragraph.')+10:]  # Final output
     return result
 
 
