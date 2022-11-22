@@ -1,12 +1,12 @@
-a = """homEwork:
-
-tHis iz your homeWork, copy these Text to variable.
-
-You NEED TO normalize it fROM letter CASEs point oF View.also, create one MORE senTENCE witH LAST WoRDS of each existING SENtence and add it to the END OF this Paragraph.
-
-it iZ misspeLLing here.fix“iZ” with correct “ is ”, but ONLY when it Iz a mistAKE.
-
-last iz TO calculate nuMber OF Whitespace characteRS in this Text.caREFULL, not only Spaces, but ALL whitespaces.I got 87."""
+# a = """homEwork:
+#
+# tHis iz your homeWork, copy these Text to variable.
+#
+# You NEED TO normalize it fROM letter CASEs point oF View.also, create one MORE senTENCE witH LAST WoRDS of each existING SENtence and add it to the END OF this Paragraph.
+#
+# it iZ misspeLLing here.fix“iZ” with correct “ is ”, but ONLY when it Iz a mistAKE.
+#
+# last iz TO calculate nuMber OF Whitespace characteRS in this Text.caREFULL, not only Spaces, but ALL whitespaces.I got 87."""
 
 
 def normalization(n):
@@ -30,7 +30,7 @@ def normalization(n):
     return output
 
 
-output = normalization(a)
+# output = normalization(a)
 
 
 def creation_of_last_words_sentence(n):
@@ -47,7 +47,7 @@ def creation_of_last_words_sentence(n):
 
     return last_words_sentence
 
-last_words_sentence = creation_of_last_words_sentence(output)
+# last_words_sentence = creation_of_last_words_sentence(output)
 
 def count_of_whitespaces(n):
     whitespaces = n.count('\n') + n.count(' ')
@@ -59,5 +59,5 @@ def append_new_sentence(main_text, new_sentence):
     return result
 
 
-print(append_new_sentence(output, last_words_sentence))
-print('Count of whitespaces:', count_of_whitespaces(output))
+# print(append_new_sentence(output, last_words_sentence))
+# print('Count of whitespaces:', count_of_whitespaces(output))
