@@ -1,6 +1,6 @@
 from datetime import datetime
 import os
-from Home_task_4_3 import *
+import Home_task_4_3 as imported_file
 
 PATH = r'C:/Users/Yelyzaveta_Shapran/Desktop/New folder (2)/test_module/newsfeed.txt'
 
@@ -94,9 +94,10 @@ class UsefulTips(Publication):
         self.body = f'Useful Tips ------------------\n{self.text}\nAuthor: {self.author.casefold().capitalize().strip()}\n------------------------------'
 
 
+# New class that take rows(text) from file
 class PublFromFile:
-    def __init__(self, cnt_rows, filename, path='C:/Users/Yelyzaveta_Shapran/Desktop/New folder (2)/test_module/'):
-        self.cnt_rows = cnt_rows
+    def __init__(self, cnt_sent, filename, path='C:/Users/Yelyzaveta_Shapran/Desktop/New folder (2)/test_module/'):
+        self.cnt_sent = cnt_sent
         self.filename = filename
         self.path = path
 
@@ -113,23 +114,24 @@ class PublFromFile:
             print('File successfully deleted ')
 
             # Create text from file lines according to the number specified by the user
-            if self.cnt_rows == 1:
+            if self.cnt_sent == 1:
                 text_body = ''.join(rows_from_file[:1])
             else:
-                text_body = ''.join(rows_from_file[:int(self.cnt_rows) - 1])
+                text_body = ''.join(rows_from_file[:int(self.cnt_sent)])
 
-            result = normalization(text_body)
+            n = text_body
+            result = imported_file.normalization(n)
             return result
 
         else:
             raise Exception(f'File {self.filename} not founded')
 
 
-if input('Text from file? Yes/No').capitalize() == 'No':
+if input('Text from file? Yes/No ').capitalize() == 'No':
     new_publication_object = Publication(input('Choose what you want to publish (News, Private Ad, Useful Tips): ').upper().strip(), input('Text: '))
     new_publication_object.publishing()
 else:
-    new_object = PublFromFile(input('Cnt rows?'), input('Filename?'))
+    new_object = PublFromFile(input('Cnt sentences? '), input('Filename? '))
     text = new_object.read_file()
 
     new_publication_object = Publication(input('Choose what you want to publish (News, Private Ad, Useful Tips): ').upper().strip(), text)
