@@ -192,3 +192,4 @@ if __name__ == '__main__':
             text = new_object.read_json()
             new_publication_object = Publication('', body=text)
             new_publication_object.write_to_file()
+
