@@ -166,7 +166,7 @@ class PublFromJsonFile():
             check(self, f)
 
             # Remove file
-            os.remove(f'{self.path}/{self.filename}')
+            os.remove(f'{self.path} + {self.filename}')
             print('File successfully deleted ')
 
             return '\n\n'.join(body_types(f))
